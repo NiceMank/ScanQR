@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakooooo</title>
+    <style>
+        :root {
+            --bg1: #0b1220;
+            --bg2: #111b33;
+            --card: rgba(255, 255, 255, 0.08);
+            --text: rgba(255, 255, 255, 0.92);
+            --muted: rgba(255, 255, 255, 0.78);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                "Segoe UI",
+                Roboto,
+                "Helvetica Neue",
+                Arial,
+                "Noto Sans",
+                "Liberation Sans",
+                sans-serif;
+            color: var(--text);
+            background: radial-gradient(1200px 800px at 20% 20%, #233a7a 0%, transparent 55%),
+                radial-gradient(1000px 700px at 85% 30%, #7a2b6f 0%, transparent 55%),
+                linear-gradient(180deg, var(--bg1), var(--bg2));
+            display: grid;
+            place-items: center;
+            padding: 24px;
+        }
+
+        .card {
+            width: min(820px, 100%);
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 28px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            padding: clamp(22px, 5vw, 44px);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .decor {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .decor img {
+            position: absolute;
+            width: 52px;
+            height: auto;
+            opacity: 0.65;
+            animation: floaty var(--dur, 12s) linear infinite;
+            transform: translate3d(0, 0, 0);
+            filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.25));
+        }
+
+        @keyframes floaty {
+            0% {
+                transform: translate(var(--x1, 0px), var(--y1, 0px)) rotate(0deg);
+            }
+            50% {
+                transform: translate(var(--x2, 180px), var(--y2, -120px)) rotate(180deg);
+            }
+            100% {
+                transform: translate(var(--x3, -160px), var(--y3, 140px)) rotate(360deg);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: clamp(44px, 8vw, 86px);
+            letter-spacing: 0.5px;
+            line-height: 1.02;
+        }
+
+        p {
+            margin: 0;
+            font-size: clamp(18px, 2.6vw, 28px);
+            color: var(--muted);
+        }
+
+        .sticker {
+            width: min(230px, 60vw);
+            margin: 22px auto 0;
+            display: grid;
+            place-items: center;
+            transform: rotate(-6deg);
+            filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35));
+        }
+
+        .sticker img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 18px;
+        }
+
+        .hint {
+            margin-top: 18px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="decor" aria-hidden="true">
+        <img src="./rire.png" alt="" style="left: 6%; top: 18%; --dur: 11s; --x1: 0px; --y1: 0px; --x2: 160px; --y2: 40px; --x3: -120px; --y3: 120px;" />
+        <img src="./rire.png" alt="" style="left: 78%; top: 14%; --dur: 14s; --x1: 0px; --y1: 0px; --x2: -200px; --y2: 90px; --x3: 120px; --y3: -80px;" />
+        <img src="./rire.png" alt="" style="left: 84%; top: 70%; --dur: 12s; --x1: 0px; --y1: 0px; --x2: -160px; --y2: -120px; --x3: -40px; --y3: 80px;" />
+        <img src="./rire.png" alt="" style="left: 16%; top: 72%; --dur: 16s; --x1: 0px; --y1: 0px; --x2: 210px; --y2: -140px; --x3: -160px; --y3: -20px;" />
+        <img src="./rire.png" alt="" style="left: 46%; top: 8%; --dur: 13s; --x1: 0px; --y1: 0px; --x2: 120px; --y2: 140px; --x3: -90px; --y3: 60px;" />
+        <img src="./rire.png" alt="" style="left: 52%; top: 78%; --dur: 15s; --x1: 0px; --y1: 0px; --x2: -110px; --y2: -130px; --x3: 150px; --y3: -40px;" />
+        <img src="./rire.png" alt="" style="left: 30%; top: 26%; --dur: 10s; --x1: 0px; --y1: 0px; --x2: 220px; --y2: -40px; --x3: -180px; --y3: 90px;" />
+        <img src="./rire.png" alt="" style="left: 92%; top: 34%; --dur: 17s; --x1: 0px; --y1: 0px; --x2: -260px; --y2: 120px; --x3: 80px; --y3: -140px;" />
+        <img src="./rire.png" alt="" style="left: 8%; top: 46%; --dur: 13s; --x1: 0px; --y1: 0px; --x2: 140px; --y2: -160px; --x3: 60px; --y3: 140px;" />
+        <img src="./rire.png" alt="" style="left: 66%; top: 46%; --dur: 11s; --x1: 0px; --y1: 0px; --x2: -120px; --y2: -180px; --x3: 190px; --y3: 40px;" />
+        <img src="./rire.png" alt="" style="left: 38%; top: 90%; --dur: 18s; --x1: 0px; --y1: 0px; --x2: 160px; --y2: -220px; --x3: -210px; --y3: -70px;" />
+        <img src="./rire.png" alt="" style="left: 60%; top: 22%; --dur: 12s; --x1: 0px; --y1: 0px; --x2: -80px; --y2: 200px; --x3: -220px; --y3: -110px;" />
+    </div>
+    <main class="card" role="main">
+
+        <div class="content">
+            <h1>Yakooooo</h1>
+            <p>Tu peux pas acheter forfait ? C'est décevant</p>
+
+            <div class="sticker" aria-hidden="true">
+                <img src="./sticker-enfant-bebe-leopard-removebg-preview.png" alt="Sticker" />
+            </div>
+
+            <div class="hint">Scanneur de WIFI comme ça</div>
+        </div>
+    </main>
+</body>
+</html>
